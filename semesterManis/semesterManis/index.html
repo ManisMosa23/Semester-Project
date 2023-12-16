@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--motorcycle icon-->
+    <script src="https://kit.fontawesome.com/b57ae05b39.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Consolas">
+    <script src="./javascripts/staffTable.js"></script>
+    <script src="./javascripts/class.js"></script>
+    <script src="./javascripts/clock.js"></script>
+    <script src="./javascripts/delivery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    
+  
+    <title>Document</title>
+</head>
+<body>
+    <!--navbar-->
+ <nav class="navbar nav-justified navbar-expand-sm navbar-dark ">
+    <div class="container-fluid ">
+
+        <!-----this makes a hamburger menu when frame is sm------>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Inventory
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Search</a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Add</a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Remove</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Orders
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Search</a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Add</a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Remove</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section>
+    <img class="logo" src="./images/logo.jpg" alt="WeDeliverTech logo">
+    <h1 class="text_elements">Reception Management Dashboard</h1>
+</section>
+<!--------Staff table-------->
+<section id="staff_Table">
+    <div class="col-mb-8">
+        <div class="container-fluid">
+            <h2>Staff</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="table table-responsive mx-auto">
+                        <table class="table table-bordered table-hover m-0" id="person_Table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Picture</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Surname</th>
+                                    <th scope="col">Email address</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Out Time</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Expected Return Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr id="row_">
+                                    <td><img id="img_0" src="" alt="img" /></td>
+                                    <td id="firstname_0"></td>
+                                    <td id="lastname_0"></td>
+                                    <td id="email_0"></td>
+                                    <td id="inOut_0" class="in_out">In</td>
+                                    <td id="outTime_0" class="time"></td>
+                                    <td id="timeAway_0" class="duration"></td>
+                                    <td id="expectedReturn_0" class="return"></td>
+                                </tr>
+                                <tr id="row_1">
+                                    <td><img id="img_1" src="" alt="img" /></td>
+                                    <td id="firstname_1"></td>
+                                    <td id="lastname_1"></td>
+                                    <td id="email_1"></td>
+                                    <td id="inOut_1" class="in_out">In</td>
+                                    <td id="outTime_1" class="time"></td>
+                                    <td id="timeAway_1" class="duration"></td>
+                                    <td id="expectedReturn_1" class="return"></td>
+                                </tr>
+                                <tr id="row_2">
+                                    <td><img id="img_2" src="" alt="img" /></td>
+                                    <td id="firstname_2"></td>
+                                    <td id="lastname_2"></td>
+                                    <td id="email_2"></td>
+                                    <td id="inOut_2" class="in_out">In</td>
+                                    <td id="outTime_2" class="time"></td>
+                                    <td id="timeAway_2" class="duration"></td>
+                                    <td id="expectedReturn_2" class="return"></td>
+                                </tr>
+                                <tr id="row_3">
+                                    <td><img id="img_3" src="" alt="img" /></td>
+                                    <td id="firstname_3"></td>
+                                    <td id="lastname_3"></td>
+                                    <td id="email_3"></td>
+                                    <td id="inOut_3" class="in_out">In</td>
+                                    <td id="outTime_3" class="time"></td>
+                                    <td id="timeAway_3" class="duration"></td>
+                                    <td id="expectedReturn_3" class="return"></td>
+                                </tr>
+                                <tr id="row_4">
+                                    <td><img id="img_4" src="" alt="img" /></td>
+                                    <td id="firstname_4"></td>
+                                    <td id="lastname_4"></td>
+                                    <td id="email_4"></td>
+                                    <td id="inOut_4" class="in_out">In</td>
+                                    <td id="outTime_4" class="time"></td>
+                                    <td id="timeAway_4" class="duration"></td>
+                                    <td id="expectedReturn_4" class="return"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <button class="staff_out" type="button"><span>Out</span></button>
+                        <button class="staff_in" type="button"><span>In</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <!-- <div class="toast-container position-relative"></div>-->
+        <div class="toast" id="staffToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img id="img_here" src="" class="rounded me-2">
+                <strong>Staff Member is late!</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="staffToastBody">
+            </div>
+        </div>
+    
+</section>
+ <!-----schedule_table----->
+ <section>
+    <div class="col mb-6">
+            <h2>Schedule Delivery</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="table table-responsive-md">
+                        <table class="table table-bordered table-hover m-0" id="schedule_table">
+                            <thead>
+                                <tr>
+                                    <th>Vehicle:</th>
+                                    <th>Name:</th>
+                                    <th>Surname:</th>
+                                    <th>Telephone:</th>
+                                    <th>Address:</th>
+                                    <th>Return time:</th>
+                                </tr>
+                            </thead>
+                            <tbody id="deliver" class="de_liv">
+                                <tr name="deli">
+                                    <td> <select name="icon" class="form-control">
+                                            <option value="<i class='bi bi-car-front-fill'></i>">Car</option>
+                                            <option value="<i class='fa-solid fa-motorcycle'></i>">Motorcycle
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="name" placeholder="Name" id="name_deliver"
+                                            class="form-control" required>
+                                    </td>
+                                    <td><input type="text" name="surname" placeholder="Surname" id="surname_deliver"
+                                            class="form-control" required></td>
+                                    <td><input type="number" name="number" placeholder="12345678"
+                                            id="number_deliver" class="form-control" min="8" required>
+                                    </td>
+                                    <td><input type="text" name="adresse" placeholder="Address" id="adresse_deliver"
+                                            class="form-control" required></td>
+                                    <td><input type="time" name="arrived" placeholder="Return time"
+                                            id="arrived_deliver" class="form-control"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <button onclick="addDelivery()" class="delivery_add" type="submit" value="Insert Row"><span>Add</span></button>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+    
+</section>
+       <!----- Delivery Board ----->
+   <section id="delivery_table">
+    <div class="col mb-6">
+        <div class="container-fluid">
+            <h2>Delivery Board</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="table table-responsive-md">
+                        <table class="table table-bordered table-hover m-0" id="driver_table">
+                            <thead>
+                                <tr>
+                                    <th>Vehicle</th>
+                                    <th>Name</th>
+                                    <th>Surname</th>
+                                    <th>Telephone</th>
+                                    <th>Delivery Address</th>
+                                    <th>Return Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <button onclick="deliveryClear()" class="delivery_clear" type="button"><span>Clear </span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <!-- <div class="toast-container position-relative"></div>-->
+        <div class="toast" id="deliverToast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="toast-header">
+                <strong>Delivery Driver is late!</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="deliverToastBody">
+            </div>
+        </div>
+</section>
+<section>
+
+    
+</body>
+</html>

@@ -1,0 +1,2 @@
+document.write("Hallo World")
+<script scr="Hello.js"></script>
